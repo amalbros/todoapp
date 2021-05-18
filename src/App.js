@@ -54,12 +54,12 @@ class App extends React.Component {
   setUpdate(text,key){
     console.log("items:"+this.state.items);
     const items = this.state.items;
-    items.map(item=>{      
+    for(let item of items){
       if(item.key===key){
-        console.log(item.key +"    "+key)
+       
         item.text= text;
       }
-    })
+    }    
     this.setState({
       items: items
     })
